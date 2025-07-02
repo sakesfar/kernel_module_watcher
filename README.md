@@ -28,6 +28,8 @@ Simple Linux kernel module that sets watchpoints to a specified memory address u
 9. Delete content of `Makefile` and insert there content from `Makefile_yocto.txt`. We use slightly different _Makefile_ while building for _Yocto_
 10. Build only kernel module : `bitbake watchpoint`
 
+> [!WARNING]
+> I've not been able to run on qemu x86. The above has been tested only on my PC
 
 
 
