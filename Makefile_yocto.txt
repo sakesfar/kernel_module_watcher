@@ -1,0 +1,11 @@
+obj-m += watchpoint.o
+
+all:
+	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) modules
+
+clean:
+	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) clean
+	rm -f *.o *.ko *.mod.* .*.cmd modules.order Module.symvers .tmp_versions
+
+modules_install:
+	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) modules_install INSTALL_MOD_PATH=$(DESTDIR)
