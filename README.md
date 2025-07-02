@@ -1,5 +1,5 @@
 # Kernel module watcher
-Simple Linux kernel module that sets watchpoints to a specified memory address + steps for Yocto building
+Simple Linux kernel module that sets watchpoints to a specified memory address using **_perf_event API_** + steps for Yocto building
 
 **Instructions**
 1. `cd /to/your/projectsFolder`\
@@ -24,7 +24,9 @@ Simple Linux kernel module that sets watchpoints to a specified memory address +
   `bitbake-layers add-layer ../meta-custom`
 6. `mkdir -p ../meta-custom/recipes-kernel/watchpoint/files`
 7. Copy `watchpoint.c` and `Makefile` into `../files`.     `cp /path/to/watchpoint.c /path/to/Makefile ../meta-custom/recipes-kernel/watchpoint/files/`
-8. Build only kernel module : `bitbake watchpoint`
+8. Add/copy `watchpoint_0.1.bb` to `../meta-custom/recipes-kernel/watchpoint`
+9. Delete content of `Makefile` and insert there content from `Makefile_yocto.txt`. We use slightly different _Makefile_ while building for _Yocto_
+10. Build only kernel module : `bitbake watchpoint`
 
 
 
