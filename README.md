@@ -1,7 +1,7 @@
 # Kernel module watcher
 Simple Linux kernel module that sets watchpoints to a specified memory address using **_perf_event API_** + steps for Yocto building
 
-**Instructions**
+## Steps for PC
 1. `cd /to/your/projectsFolder`\
 2. `git clone https://github.com/sakesfar/kernel_module_watcher`
 3. `cd kernel_module_watcher `
